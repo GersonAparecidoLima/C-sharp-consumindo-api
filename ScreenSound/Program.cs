@@ -1,4 +1,5 @@
-﻿using ScreenSound.Modelos;
+﻿using ScreenSound.Filtros;
+using ScreenSound.Modelos;
 using System.Text.Json;
 
 //Criação do objeto: HttpClient client = new HttpClient()
@@ -19,7 +20,15 @@ using (HttpClient client = new HttpClient())
         var musica = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
         //O ponto de exclamação indica que musica não poder ser nulo
         //Console.WriteLine(musica.Count);  
-        musica[0].ExibirFichaTecnica();
+        //musica[0].ExibirFichaTecnica();
+        //LinqFilter.FiltrarTodosOsGenerosMusicais(musica);
+        ///ExibirListaDeArtistasOrdenados
+        //LinqOrder.ExibirListaDeArtistasOrdenados(musica);
+        //LinqFilter.FiltrarArtistasPorGeneroMusical(musica, "rock");
+        LinqFilter.FiltrarMusicasDeUmArtista(musica, "U2");
+
+
+
     }
     catch (Exception ex)
     {
