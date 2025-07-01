@@ -20,7 +20,13 @@ using (HttpClient client = new HttpClient())
         var musica = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
         //O ponto de exclamação indica que musica não poder ser nulo
         //Console.WriteLine(musica.Count);  
+
+
         //musica[0].ExibirFichaTecnica();
+
+        LinqFilter.FiltrarMusicasEmCSharp(musica);
+
+
         //LinqFilter.FiltrarTodosOsGenerosMusicais(musica);
         ///ExibirListaDeArtistasOrdenados
         //LinqOrder.ExibirListaDeArtistasOrdenados(musica);
@@ -28,7 +34,7 @@ using (HttpClient client = new HttpClient())
         //LinqFilter.FiltrarMusicasDeUmArtista(musica, "U2");
 
 
-        
+
         //var musicasPreferidasDoDaniel = new MusicasPreferidas("Daniel");
 
         //musicasPreferidasDoDaniel.AdicionarMusicasFavoritas(musica[1]);
@@ -40,16 +46,16 @@ using (HttpClient client = new HttpClient())
         //musicasPreferidasDoDaniel.ExibirMusicasFavoritas();
 
 
-        var musicasPreferidasEmilly = new MusicasPreferidas("Emy");
+        //var musicasPreferidasEmilly = new MusicasPreferidas("Emy");
 
-        musicasPreferidasEmilly.AdicionarMusicasFavoritas(musica[500]);
-        musicasPreferidasEmilly.AdicionarMusicasFavoritas(musica[637]);
-        musicasPreferidasEmilly.AdicionarMusicasFavoritas(musica[428]);
-        musicasPreferidasEmilly.AdicionarMusicasFavoritas(musica[13]);
-        musicasPreferidasEmilly.AdicionarMusicasFavoritas(musica[71]);
+        //musicasPreferidasEmilly.AdicionarMusicasFavoritas(musica[500]);
+        //musicasPreferidasEmilly.AdicionarMusicasFavoritas(musica[637]);
+        //musicasPreferidasEmilly.AdicionarMusicasFavoritas(musica[428]);
+        //musicasPreferidasEmilly.AdicionarMusicasFavoritas(musica[13]);
+        //musicasPreferidasEmilly.AdicionarMusicasFavoritas(musica[71]);
 
-        musicasPreferidasEmilly.ExibirMusicasFavoritas();
-        musicasPreferidasEmilly.GerarArquivoJson();
+        //musicasPreferidasEmilly.ExibirMusicasFavoritas();
+        //musicasPreferidasEmilly.GerarArquivoJson();
 
     }
     catch (Exception ex)
